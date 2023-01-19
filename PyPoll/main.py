@@ -4,7 +4,7 @@ import csv
 
 pypoll_csv = os.path.join("..", "PyPoll", "Resources", "election_data.csv")
 
-# create variables lists to store information
+# create variables, lists, & dictionaries to store information
 total_count = 0
 candidate_list = []
 candidate_count = {}
@@ -22,7 +22,7 @@ with open(pypoll_csv) as csvfile:
     for row in csvreader:
         total_count = total_count + 1
 
-# compile complete list of candidates & their total votes received
+# compile complete list of candidates and their total votes received
         candidate = row[2]
         if candidate not in candidate_list:
             candidate_list.append(candidate)
